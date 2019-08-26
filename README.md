@@ -19,7 +19,7 @@ Chrome  | 54+ | √
 
 ### 创建一个简单应用
 ```
-git clone ...
+git clone https://github.com/kimchen003/ebuilder-quick-start.git
 yarn install
 yarn start
 ```
@@ -55,7 +55,7 @@ render() {
 - `componentDidMount`：组件被安装后，被调用。
 ``` js
 // 例如可以在组件安装后绑定事件
-update() {
+componentDidMount() {
     this.refs.btn.onclick = function(){
         ...
     }
@@ -64,8 +64,8 @@ update() {
 - `update`: 组件更新时，被调用。
 ``` js
 // 例如可以在被点击是显示组件
-update() {
-    this.setState({ show: true });
+update(change) {
+    this.setState({ show: change.show });
 }
 ```
 - `componentDidUnmount`: 组件被移除后，被调用。
