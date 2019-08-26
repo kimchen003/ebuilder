@@ -26,10 +26,10 @@ yarn start
 
 ### 使用手册
 - [1. 生命周期](#user-content-生命周期)
-- [2. 状态机制](#user-content-状态(State)机制)
-- [3. 节点缓存](#user-content-节点(Refs)缓存)
-- [4. 初始参数](#user-content-初始参数(Props))
-- [5. 兼容低版本浏览器](#user-content-兼容低版本浏览器(Polyfill))
+- [2. 状态(State)机制](#user-content-状态机制)
+- [3. 节点(Refs)缓存](#user-content-节点缓存)
+- [4. 初始参数(Props)](#user-content-初始参数)
+- [5. 兼容低版本浏览器(Polyfill)](#user-content-兼容低版本浏览器)
 
 <h3 id="user-content-生命周期">1. 生命周期</h3>
 
