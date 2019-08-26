@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ebuilder Test</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.15.10/styles/github.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script> -->
     <style>
         code {
             visibility: hidden;
@@ -36,22 +36,73 @@
             <h1>Ebuilder 单元测试</h1>
             <p class="lead" style="padding-bottom:10px;">测试尽可能多的使用场景.</p>
 
-            <ebuilder-test></ebuilder-test>
-
             <!-- 生命周期 -->
-            <!-- <h5>1 、 生命周期</h5>
+            <h5>1 、 生命周期</h5>
             <div id="ebuilder-test-life-circle-result"></div>
             <ebuilder-test-life-circle></ebuilder-test-life-circle>
-            <pre></pre> -->
+            <pre></pre>
             
             <!-- 列表 -->
-            <!-- <h5>2 、 列表</h5>
+            <h5>2 、 列表</h5>
             <div id="ebuilder-test-list-result"></div>
             <ebuilder-test-list></ebuilder-test-list>
-            <pre></pre> -->
+            <pre></pre>
+
+            <!-- 模板 -->
+            <h5>3 、 模板</h5>
+            <div id="ebuilder-test-template-result"></div>
+            <ebuilder-test-template
+                data='[
+                    {
+                        "shelveName": "水果",
+                        "varieties": [
+                            {
+                                "name": "香蕉",
+                                "price": [
+                                    { "region": "北京大洋路", "money": "5.7 元/公斤" },
+                                    { "region": "北京新发地", "money": "5 元/公斤" },
+                                    { "region": "岳各庄市场", "money": "5.7 元/公斤" },
+                                    { "region": "北京八里桥", "money": "4.2 元/公斤" }
+                                ]
+                            },
+                            {
+                                "name": "西瓜",
+                                "price": [
+                                    { "region": "北京大洋路", "money": "5.2 元/公斤" },
+                                    { "region": "北京新发地", "money": "2.02 元/公斤" },
+                                    { "region": "岳各庄市场", "money": "1.8 元/公斤" },
+                                    { "region": "北京八里桥", "money": "2.1 元/公斤" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "shelveName": "蔬菜",
+                        "varieties": [
+                            {
+                                "name": "白菜",
+                                "price": [
+                                    { "region": "北京大洋路", "money": "0.5 元/公斤" },
+                                    { "region": "北京新发地", "money": "0.8 元/公斤" },
+                                    { "region": "岳各庄市场", "money": "1.5 元/公斤" },
+                                    { "region": "北京八里桥", "money": "0.76 元/公斤" }
+                                ]
+                            }
+                        ]
+                    }
+                ]'
+            >
+            </ebuilder-test-template>
+            <pre></pre>
 
         </div>
     </div>
 
+    <script>
+        if( !window.customElements ){
+            //document.write('<script src="https://raw.githubusercontent.com/kimchen003/ebuilder/master/polyfill/dist/index.js"><\/script>');
+            document.write('<script  type="text/javascript" src="http://10.228.11.11/dakun/ebuilder/raw/master/polyfill/dist/index.js"><\/script>');  
+        }
+    </script>
 <script type="text/javascript" src="index.js"></script></body>
 </html>

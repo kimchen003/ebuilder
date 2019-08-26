@@ -101,7 +101,8 @@ abstract class WebComponent extends HTMLElement {
     connectedCallback(): void{
 
         // 初始化属性
-        this.initVal();
+        !this.refs && ( this.refs={} );
+        !this.state && ( this.state={} );
 
         // 生命周期-组件被安装前
         this.componentWillMount();
@@ -153,14 +154,6 @@ abstract class WebComponent extends HTMLElement {
 
             document.head.insertBefore(styleSheet, document.querySelector('title') );
         }
-    }
-
-    /**
-     * 初始化属性
-     */
-    initVal(): void {
-        !this.refs && ( this.refs={} );
-        !this.state && ( this.state={} );
     }
 
     /**

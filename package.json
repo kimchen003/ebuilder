@@ -9,7 +9,13 @@
     "polyfill-compress": "rimraf ./polyfill/dist && webpack --mode production --config ./build/webpack.polyfill.conf.js",
     "polyfill-uncompress": "rimraf ./polyfill/dist && webpack --mode development --config ./build/webpack.polyfill.conf.js"
   },
-  "author": "",
+  "keywords": ["webcomponent", "js", "ts", "es6"],
+  "homepage": "https://github.com/kimchen003/ebuilder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimchen003/ebuilder"
+  },
+  "author": "kim233",
   "license": "ISC",
   "browserslist": [
     "last 2 versions",
