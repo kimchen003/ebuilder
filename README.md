@@ -82,11 +82,16 @@ componentDidUnmount() {
 注：开发者需要手动控制`state`改变后的变化。
 ``` js
 import { WebComponent, html, render } from 'ebuilder';
+const StyleSheet = require('./ebuilder-test.less');
 
 export default class EbuilderTest extends WebComponent {
 
     constructor() {
         super();
+
+        // 初始样式表
+        this.StyleSheet = StyleSheet;
+        this.Style = StyleSheet.locals || {};
 
         this.state = {
             show : false
@@ -95,8 +100,9 @@ export default class EbuilderTest extends WebComponent {
     }
 
     render() {
+        const { Style } = this;
         return html`
-            <div>Hello World !</div>
+            <div class="${ Style.text }">Hello World !</div>
         `;
     }
 

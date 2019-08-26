@@ -1,8 +1,8 @@
 {
   "name": "ebuilder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "用react思维去开发webcomponent",
-  "main": "./index.js",
+  "main": "./src/index.ts",
   "scripts": {
     "test": "webpack-dev-server --mode development --config ./build/webpack.test.conf.js --port 8010",
     "test-build-uncompress": "rimraf ./test/dist && webpack --mode development --config ./build/webpack.test.conf.js",
